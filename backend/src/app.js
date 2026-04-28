@@ -7,7 +7,10 @@ import authRoute from './auth/auth.route.js';
 const app = express();
 
 app.use(cors({
-    origin: true,
+    origin:
+      process.env.NODE_ENV === "production"
+        ? "https://dek-nek-project-henna.vercel.app"
+        : "http://localhost:5173",
     credentials: true
 }));
 app.use(express.json());
