@@ -5,7 +5,7 @@ import { useNavigate, Link } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate();
-  const queryClient = useQueryClient();
+  const queryClient =  useQueryClient();
 
   const [form, setForm] = useState({
     username: "",
