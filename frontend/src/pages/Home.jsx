@@ -23,17 +23,17 @@ const Home = () => {
 
         <section className="features-grid">
           <div className="feature-card glass">
-            <div className="feature-icon">🛡️</div>
+            <div className="feature-icon">AVA</div>
             <h3>Advanced Security</h3>
             <p>Industry-standard encryption and secure token handling to keep your data safe.</p>
           </div>
           <div className="feature-card glass">
-            <div className="feature-icon">⚡</div>
+            <div className="feature-icon">NE</div>
             <h3>Lightning Fast</h3>
             <p>Optimized performance ensuring seamless authentication in milliseconds.</p>
           </div>
           <div className="feature-card glass">
-            <div className="feature-icon">📱</div>
+            <div className="feature-icon">ESH</div>
             <h3>Fully Responsive</h3>
             <p>A beautiful experience across all devices, from mobile to desktop.</p>
           </div>

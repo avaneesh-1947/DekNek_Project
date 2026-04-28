@@ -17,7 +17,6 @@ const PublicRoute = ({ children }) => {
     );
   }
 
-  // If user is logged in, redirect to home
   if (user) {
     return <Navigate to="/" />;
   }

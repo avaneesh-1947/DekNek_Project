@@ -26,7 +26,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar glass">
-      <Link to="/" className="nav-logo" onClick={() => setIsMenuOpen(false)}>DekNek</Link>
+      <Link to="/" className="nav-logo" onClick={() => setIsMenuOpen(false)}>SecureHai</Link>
 
       <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle menu">
         {isMenuOpen ? "✕" : "☰"}

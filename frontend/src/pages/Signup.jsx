@@ -16,7 +16,6 @@ const Signup = () => {
   const mutation = useMutation({
     mutationFn: signupUser,
     onSuccess: () => {
-      // Land to login page automatically after signup
       navigate("/login");
     }
   });
