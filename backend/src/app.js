@@ -6,13 +6,23 @@ import authRoute from './auth/auth.route.js';
 
 const app = express();
 
-app.use(cors({
-    origin:
-      process.env.NODE_ENV === "production"
-        ? "https://dek-nek-project-henna.vercel.app"
-        : "http://localhost:5173",
-    credentials: true
-}));
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://dek-nek-project-henna.vercel.app",
+];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(cookieParser());
 
