@@ -2,7 +2,7 @@
 
 A full-stack MERN authentication application built with:
 
-* React + Vite + Tailwind CSS
+* React + Vite + CSS
 * TanStack Query
 * Node.js + Express
 * MongoDB + Mongoose
