@@ -1,8 +1,8 @@
-import { Navigate } from "react-router-dom";
+import { Navigate ,Outlet} from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { getMe } from "../services/authService";
 
-const ProtectedRoute = ({ children }) => {
+const ProtectedRoute = () => {
 
   const { data, isLoading, isError } = useQuery({
     queryKey: ["me"],
@@ -19,10 +19,10 @@ const ProtectedRoute = ({ children }) => {
   }
 
   if (isError) {
-    return <Navigate to="/login" />;
+    return <Navigate to="/login" replace />;
   }
 
-  return children;
+  return <Outlet />;
 };
 
 export default ProtectedRoute;

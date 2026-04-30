@@ -1,8 +1,8 @@
-import { Navigate } from "react-router-dom";
+import { Navigate , Outlet} from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { getMe } from "../services/authService";
 
-const PublicRoute = ({ children }) => {
+const PublicRoute = () => {
   const { data: user, isLoading } = useQuery({
     queryKey: ["me"],
     queryFn: getMe,
@@ -18,10 +18,10 @@ const PublicRoute = ({ children }) => {
   }
 
   if (user) {
-    return <Navigate to="/" />;
+    return <Navigate to="/" replace/>;
   }
 
-  return children;
+  return <Outlet />;
 };
 
 export default PublicRoute;
